@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Planet from './Planet'
 import PlanetSidebar from './PlanetSidebar'
+import Stars from './Stars'
 
 const planets = [
   { name: "Sun", radius: 3, distance: 0, color: "#f6f3a7", speed: 0 },
@@ -29,6 +30,7 @@ export default function SolarSystem() {
     }}>
       <div style={{ flex: 1 }}>
         <Canvas camera={{ position: [0, 20, 25], fov: 50 }}>
+          <Stars />
           <ambientLight intensity={0.5} />
           <pointLight position={[0, 0, 0]} intensity={2} color="#f6f3a7" />
           {planets.map((planet) => (
