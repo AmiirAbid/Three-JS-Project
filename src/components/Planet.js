@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
-export default function Planet({ name, radius, distance, color, speed, hasRing }) {
+export default function Planet({ radius, distance, color, speed, hasRing }) {
   const planetRef = useRef()
   
   useFrame(() => {
